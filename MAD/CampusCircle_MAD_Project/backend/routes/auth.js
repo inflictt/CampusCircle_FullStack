@@ -1,6 +1,5 @@
 // -------------------------------------------------------------
 // Auth routes — signup, login
-// NOTE: For simplicity and viva-friendliness we compare passwords
 // as plain text against the `password` column. In a real product
 // you would bcrypt-hash them. Keeping it simple makes it trivial
 // to explain in the viva and matches what the DBMS seed stores.
@@ -23,7 +22,6 @@ router.post('/signup', async (req, res, next) => {
         }
 
         // Auto-verify in the demo so new signups can list immediately.
-        // In production this would stay 0 until an admin calls sp_verify_user.
         const [result] = await pool.query(
             `INSERT INTO users (name, email, password, phone_number, hostel_block, is_verified, verified_by)
              VALUES (?, ?, ?, ?, ?, 1, 1)`,

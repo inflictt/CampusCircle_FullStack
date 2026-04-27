@@ -17,7 +17,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class ApiClient {
 
-    // >>> CHANGE ME BEFORE DEMO <<<
 // /api/ hata do kyunki woh routes mein pehle se hoga
     public static final String BASE_URL = "http://10.174.20.197:3000/";
     private static Retrofit retrofit;
