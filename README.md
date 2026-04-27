@@ -1,3 +1,8 @@
+# Campus Circle — Project Structure & File Distribution
+
+Below is the complete, detailed directory tree for the Campus Circle full-stack repository. It outlines the 3-tier architecture (MySQL Database, Node.js Backend, Android Frontend) along with specific team member assignments and the purpose of every file.
+
+```text
 CampusCircle-Final/
 │
 ├── README.md                              [Saksham] Main project documentation & setup guide
@@ -105,3 +110,4 @@ CampusCircle-Final/
                     ├── fragment_profile.xml       UI for ProfileFragment
                     ├── item_card.xml              Single row UI design for marketplace items
                     └── transaction_card.xml       Single row UI design for transaction history
+```
