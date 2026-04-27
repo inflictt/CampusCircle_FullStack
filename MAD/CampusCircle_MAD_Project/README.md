@@ -165,11 +165,3 @@ That covers: signup/login, listing, browsing, requesting, approving, completing,
 | Project report PDF | 5 | 8-12 page MAD report — can reuse Problem Statement + Methodology from the DBMS report |
 
 ---
-
-## Viva-friendly notes (what to say when asked)
-
-- **Why Node.js and not Firebase?** We already have a normalized MySQL schema from the DBMS project — wrapping it in a REST API was cheaper than re-modelling the data in Firebase and it keeps both subjects on a single source of truth.
-- **Why procedures instead of plain INSERTs in the backend?** Validations (seller verified, buyer ≠ seller, price ≥ 0, rating 1-5) are in `SIGNAL SQLSTATE` branches inside the procedures. The Node API just forwards the error as HTTP 400. Zero duplication of business rules.
-- **How does ACID hold?** Each procedure wraps its multi-row writes in `START TRANSACTION ... COMMIT` with a `DECLARE EXIT HANDLER FOR SQLEXCEPTION` that rolls back on any mid-flight failure.
-- **Why a single Activity with fragments instead of 4 separate Activities for the tabs?** BottomNavigationView + FragmentManager is the standard Android idiom (Lecture 9), and it preserves state across tab switches without re-creating whole Activities.
-- **How do you handle network calls off the main thread?** Retrofit's `enqueue()` automatically runs the network call on a worker thread and posts the callback back to the main thread — that's what lets us update UI directly in `onResponse`.
