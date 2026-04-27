@@ -28,9 +28,9 @@ CampusCircle-Final/
 │       ├── auth.js                        [Saksham] Login/Signup API routing
 │       ├── items.js                       [Saksham] Fetch listings and post new items API
 │       ├── categories.js                  [Saksham] Fetch categories API
-│       ├── transactions.js                [Pari] Request to buy, approve, handover API
-│       ├── reviews.js                     [Pari] Submit review API
-│       └── users.js                       [Pari] Fetch user profile stats API
+│       ├── transactions.js                [Saksham] Request to buy, approve, handover API
+│       ├── reviews.js                     [Saksham] Submit review API
+│       └── users.js                       [Saksham] Fetch user profile stats API
 │
 └── android/                               [Prerit] Android Studio (Java) Project Root
     ├── build.gradle                       [Prerit] Project-level Gradle config
