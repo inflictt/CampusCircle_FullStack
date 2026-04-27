@@ -56,8 +56,4 @@ Thin Node.js + Express REST API for the CSE3709 MAD project. Reads go through th
 - On the phone, make sure it's on the same WiFi as the laptop.
 - In the Android app, set `ApiClient.BASE_URL = "http://<laptop-ip>:3000/"`.
 
-## Viva-ready viva pointers
 
-- Every POST route uses a stored procedure so the procedure's `SIGNAL SQLSTATE` errors bubble up as HTTP 400 with the MySQL error text — examiners can see ACID + validation layering.
-- Every GET list route reads from a view, showing the "views abstract read paths" point from DBMS.
-- No business logic in JavaScript — all invariants live in the DB layer.
